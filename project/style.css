@@ -4,69 +4,82 @@
   padding: 0
 }
 
+:root {
+  --page-bg: #EDF2F8;
+  --std-font-sz: 13px;
+  --main-width: 1440px;
+  --main-gap: 30px;
+  --card-bg: white;
+  --card-br: 10px;
+  --card-padding: 30px;
+  --card-margin: 10px;
+  --card-img-size: 40px;
+  --card-special-color: #fff;
+}
+
 body {
-  background: #EDF2F8;
+  background: var(--page-bg);
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.7;
-  font-size: 13px;
+  font-size: var(--std-font-sz);
 }
 
 .testimonials {
-  max-width: 1440px;
+  max-width: var(--main-width);
   margin: 100px auto;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: var(--main-gap);
 
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
-  padding: 30px;
+  background: var(--card-bg);
+  border-radius: var(--card-br);
+  padding: var(--card-padding);
   box-shadow: rgba(17,12,46,.15) 0px 48px 100px 0px;
-  margin-bottom: 10px;
+  margin-bottom: var(--card-margin);
 }
 
 .card__header {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: var(--card-margin);
 }
 
 .card__header h3 {
-  font-size: 15px;
+  font-size: calc(var(--std-font-sz) * 1.15);
 }
 
 .card__header p {
-  opacity: 15%;
+  opacity: 70%;
 }
 
 .card__img {
-  width: 40px;
-  height: 40px;
+  width: var(--card-img-size);
+  height: var(--card-img-size);
   border-radius: 50%;
   border: 2px solid #996ED9;
-  margin-right: 10px;
+  margin-right: var(--card-margin);
 }
 
 .card__lead {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.3;
-  margin-bottom: 20px;
+  margin-bottom: calc(var(--card-margin) * 2);
 }
 
 .card__quote {
-  font-size: 15px;
+  font-size: calc(var(--std-font-sz) * 1.15);
   line-height: 1.4;
   opacity: 70%;
 }
 
 .card--bg-purple {
   background: hsl(263, 55%, 52%);
-  color: #fff;
+  color: var(--card-special-color);
   background-image: url('./images/bg-pattern-quotation.svg');
   background-repeat: no-repeat;
   background-position: top 10px right 100px;
@@ -74,13 +87,13 @@ body {
 
 .card--bg-gray-blue {
   background: hsl(217, 19%, 35%);
-  color: #fff;
+  color: var(--card-special-color);
 
 }
 
 .card--bg-black-blue {
   background: hsl(219, 29%, 14%);
-  color: #fff;
+  color: var(--card-special-color);
 }
 
 .card:nth-of-type(1) {
