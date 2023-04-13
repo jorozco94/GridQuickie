@@ -24,16 +24,20 @@ body {
   font-size: var(--std-font-sz);
 }
 
-.testimonials {
+main {
   max-width: var(--main-width);
   margin: 100px auto;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--main-gap);
-
 }
 
+footer {
+  text-align: center;
+}
+
+/* CARDS */
 .card {
   background: var(--card-bg);
   border-radius: var(--card-br);
@@ -110,15 +114,13 @@ body {
   grid-row: 2 / 3;
 }
 
-footer {
-  text-align: center;
-}
-
 @media(max-width: 768px) {
-  .testimonials {
+  main {
     grid-template-columns: 1fr;
     width: 100%;
   }
+
+  /* CARDS */
 
   .card:nth-of-type(1) {
     grid-column: 1;
